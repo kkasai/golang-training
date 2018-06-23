@@ -1,0 +1,1 @@
+go run echo.go a b c
