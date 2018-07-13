@@ -9,14 +9,23 @@ func TestPopCountFor(t *testing.T) {
 	}
 }
 
+// 関数が変数をreturnした値を使ってないときや、関数に渡す値が変数でない場合
+// コンパイル時に先に計算されてしまう？
+var result int
+var value = uint64(100)
+
 func BenchmarkPopCountFormula(b *testing.B) {
+	var temp int
 	for i := 0; i < b.N; i++ {
-		PopCountFormula(uint64(100))
+		temp += PopCountFormula(value)
 	}
+	result = temp
 }
 
 func BenchmarkPopCountFor(b *testing.B) {
+	var temp int
 	for i := 0; i < b.N; i++ {
-		PopCountFor(uint64(100))
+		temp += PopCountFor(value)
 	}
+	result = temp
 }
