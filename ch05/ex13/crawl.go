@@ -89,6 +89,6 @@ func main() {
 		fmt.Println("usage: crawl <url> [<url>...]")
 		os.Exit(1)
 	}
-	
+
 	breadthFirst(crawl, os.Args[1:])
 }
