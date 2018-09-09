@@ -25,12 +25,12 @@ func TestWordCounter(t *testing.T) {
 		}
 
 		if n != len(bytes) {
-			t.Errorf("expected: %d but was actual: %d", n, len(bytes))
+			t.Errorf("expected: %d but was actual: %d", len(bytes), n)
 			continue
 		}
 
 		if c != WordCounter(d.expected) {
-			t.Errorf("expected: %d but was actual: %d", c, d.expected)
+			t.Errorf("expected: %d but was actual: %d", d.expected, c)
 		}
 	}
 }
@@ -58,12 +58,12 @@ func TestLineCounter(t *testing.T) {
 		}
 
 		if n != len(bytes) {
-			t.Errorf("expected: %d but was actual: %d", n, len(bytes))
+			t.Errorf("expected: %d but was actual: %d", len(bytes), n)
 			continue
 		}
 
 		if c != LineCounter(d.expected) {
-			t.Errorf("expected: %d but was actual: %d", c, d.expected)
+			t.Errorf("expected: %d but was actual: %d", d.expected, c)
 		}
 	}
 }
