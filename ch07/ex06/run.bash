@@ -1,1 +1,1 @@
-go run -temp 273.15K
+go run tempflag.go -temp 273.15K
