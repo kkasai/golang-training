@@ -24,7 +24,7 @@ func main() {
 	}
 
 	images := ElementsByTagName(doc, "img")
-	headings := ElementsByTagName(doc, "img")
+	headings := ElementsByTagName(doc, "h1", "h2", "h3", "h4")
 	printElement(images)
 	printElement(headings)
 }
