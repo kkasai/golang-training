@@ -1,0 +1,1 @@
+go run findlinks.go http://www.gopl.io
