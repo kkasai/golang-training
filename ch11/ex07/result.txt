@@ -1,0 +1,16 @@
+$ go test -v --bench=.
+=== RUN   Example_one
+--- PASS: Example_one (0.00s)
+=== RUN   Example_two
+--- PASS: Example_two (0.00s)
+goos: windows
+goarch: amd64
+pkg: github.com/golang-training/ch11/ex07
+BenchmarkIntSet_Add-4                      50000             24213 ns/op
+BenchmarkMapIntSet_Add-4                   20000             70051 ns/op
+BenchmarkIntSet_UnionWith-4                30000             48719 ns/op
+BenchmarkMapIntSet_UnionWith-4              5000            255216 ns/op
+BenchmarkIntSet_AddAll-4                   50000             23763 ns/op
+BenchmarkMapIntSet_AddAll-4                20000             65218 ns/op
+PASS
+ok      github.com/golang-training/ch11/ex07    10.570s
