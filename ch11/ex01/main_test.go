@@ -20,7 +20,7 @@ func TestCharCount(t *testing.T) {
 		}, {
 			[]byte("Hi, 世.\300"),
 			map[rune]int{'H': 1, 'i': 1, ',': 1, ' ': 1, '世': 1, '.': 1},
-			[]int{5, 5, 0, 1, 0},
+			[]int{0, 5, 0, 1, 0},
 			1,
 		},
 	} {
@@ -42,7 +42,7 @@ func TestCharCount(t *testing.T) {
 			}
 		}
 
-		for i := 1; i < len(utflen); i++ {
+		for i := 0; i < len(utflen); i++ {
 			if utflen[i] != test.utflen[i] {
 				t.Errorf("utflen[%d] is %d, but want %d\n", i, utflen[i], test.utflen[i])
 				continue
